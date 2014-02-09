@@ -32,7 +32,7 @@ when "rhel", "fedora"
 end
 
 Array(node['zsh']['users']).each do |user|
-  template "#{user['home']}.zshrc" do
+  template "#{user['home']}/.zshrc" do
     owner user['name']
     group user['group']
     source 'custom.zshrc.erb'

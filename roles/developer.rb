@@ -1,6 +1,6 @@
 name "developer"
 description "for development machines"
-run_list "recipe[git]", "recipe[chruby::system]"
+run_list "recipe[git]", "recipe[chruby::system]", "recipe[zsh]"
 
 default_attributes(
   "chruby" => {
