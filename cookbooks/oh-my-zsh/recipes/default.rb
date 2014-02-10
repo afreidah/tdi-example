@@ -35,7 +35,7 @@ search( :users, "shell:*zsh AND NOT action:remove" ).each do |u|
   theme = data_bag_item( "users", user_id )["oh-my-zsh-theme"]
 
   template "/home/#{user_id}/.zshrc" do
-    source "zshrc.erb"
+    source "custom.zshrc.erb"
     owner user_id
     group user_id
     variables( :theme => ( theme || node[:ohmyzsh][:theme] ))
